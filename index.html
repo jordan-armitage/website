@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jordan Armitage</title>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="icon" type="image/png" href="assets/favicon.png">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        <link rel="apple-touch-icon" href="assets/webclip.png">
+    </head>
+    
+    <body>  
+
+        <header>
+            <div class="header-content">
+                <div>
+                    <a href="index.html" class="full-div-link">
+                        <img class="header-logo" src="assets/logo-black.png" alt="Logo">
+                    </a>
+                </div>
+
+                <div class="header-links">
+                    <a href="https://store.jordanarmitage.com/" class="header-link" target="_blank">Store</a>
+                    <a href="about.html" class="header-link">About</a>
+                </div>
+            </div>
+            
+            <div class="divider-line"></div>
+        </header>
+
+        <div id="popup">
+            <div id="popup-content">
+                
+                <button id="close-popup-button" onclick="closePopup()">X</button>
+
+                <!-- OBJECT 01 -->                
+                <div id="popup-01" class="popup-item b-color-01">
+                    <div class="image-slider">
+                        <img class="slide-image" src="assets/object01-1.jpeg" alt="OBJECT 01 1">
+                        <img class="slide-image" src="assets/object01-2.jpeg" alt="OBJECT 01 2">
+                        <img class="slide-image wide-image" src="assets/object01-3.png" alt="OBJECT 01 3">
+                        <button class="prev-button">&#10094;</button>
+                        <button class="next-button">&#10095;</button>
+                    </div>
+                        <div class="popup-text">
+                        <h1>Object 01 is a leather wallet.</h1>
+                        <p class="single-space">A handmade wallet in two colorways:</p>
+                        <ul>
+                            <li>Brown leather with a red zipper</li>
+                            <li>Green leather with a mustard yellow zipper</li>
+                        </ul>
+                        <p class="single-space">Get it with or without card pockets.</p>
+                        <ul>
+                            <li>With pockets has two pockets. One on the outside for quick access, and a second one inside for organization.</li>
+                            <li>Go without pockets if you want to keep it loose.</li>
+                        </ul>
+                        <p><br></p>
+                        <a class="the-button" href="https://store.jordanarmitage.com/product/object01" target="_blank">Go to the store</a>
+                    </div>
+                    
+                </div>
+                
+                <!-- OBJECT 02 --> 
+                <div id="popup-02" class="popup-item flex-column b-color-02"> 
+                    <img class="img-horizontal" src="assets/object02-1.gif" alt="OBJECT 02 1">
+                    <div class="popup-text">
+                        <h1>Object 02 is a nostalgic roadtrip.</h1>
+                        <p>I want to go on a road trip anywhere in the world. I want to feel like I'm sitting in the back seat of the car, looking out the window. Or I want to stare out the front of the car like I’m driving along any road.</p>
+                        <p>I want to go on nostalgic road trips on old commutes and explore new places that I've never seen.</p>
+                        <p>This is a work in progress. Check out the <a href="https://github.com/jordan-armitage/" target="_blank">Github</a> or check back here soon!</p>
+                    </div>
+                </div>
+
+                <!-- OBJECT 03 --> 
+                <div id="popup-03" class="popup-item b-color-03">
+                    <div class="single-image">
+                        <img class="slide-image" src="assets/object03-2.png" alt="OBJECT 03 1">
+                    </div>
+                    <div class="popup-text">
+                        <h1>Object 03 is a wall hook.</h1>
+                        <p>Mix and match any 4 colors.</p>
+                        <p>These are made of solid birch hardwood, with UV resistant acrylic paint, and a water resistant coating.</p>
+                        <p><br></p>
+                        <div class="store-link">
+                            <a class="the-button" href="https://store.jordanarmitage.com/product/object03" target="_blank">Go to the store</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="main-body">
+            <div class="grid-body">
+            
+                <!-- OBJECT 01 --> 
+                <div class="image-container">
+                    <div class="image-overlay">
+                        <img src="assets/object01-1.jpeg" alt="OBJECT 01 1" onclick="showPopup('popup-01', '1')"/>
+                        <p class="image-text t-color-01 object-text">OBJECT</p>
+                        <p class="image-text t-color-01">01</p>
+                    </div>
+                </div>
+                
+                <!-- OBJECT 02 --> 
+                <div class="gif-container">
+                    <div class="image-overlay">
+                        <img class="static" src="assets/object02-1-still.jpeg" alt="OBJECT 02 1 Still" onclick="showPopup('popup-02', '1')"/>
+                        <img class="animated" src="assets/object02-1-square.gif" alt="OBJECT 02 1 Square" onclick="showPopup('popup-02', '1')"/>
+                        <p class="image-text t-color-02 object-text">OBJECT</p>
+                        <p class="image-text t-color-02">02</p>
+                    </div>
+                </div>
+                           
+                <!-- OBJECT 03 --> 
+                <div class="image-container">
+                    <div class="image-overlay">
+                        <img src="assets/object03-2.png" alt="OBJECT 03 1" onclick="showPopup('popup-03', '2')">
+                        <p class="image-text t-color-03 object-text">OBJECT</p>
+                        <p class="image-text t-color-03">03</p>
+                    </div>
+                </div>          
+            
+            </div>
+        </div>
+
+        <footer>
+            <div class="divider-line"></div>
+            <div class="footer-text">
+                <p class="single-space">JORDAN ARMITAGE LLC, 2023</p>
+                <a href="https://www.instagram.com/jordan.armitage/" target="_blank">An Object Incubator</a>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
