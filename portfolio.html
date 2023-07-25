@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio - Jordan Armitage</title>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="icon" type="image/png" href="assets/favicon.png">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        <link rel="apple-touch-icon" href="assets/webclip.png">
+    </head>
+    
+    <body>  
+
+        <header>
+            <div class="header-content">
+                <div>
+                    <a href="index.html" class="full-div-link" target="_blank">
+                        <img class="header-logo" src="assets/logo-black.png" alt="Logo">
+                    </a>
+                </div>
+
+                <div class="header-links">
+                    <a href="index.html" class="header-link" target="_blank">Home</a>
+                    <a href="about.html" class="header-link" target="_blank">About</a>
+                </div>
+            </div>
+            
+            <div class="divider-line"></div>
+        </header>
+
+        <div id="popup">
+            <div id="popup-content">
+                
+                <button id="close-popup-button" onclick="closePopup()">X</button>
+
+                <!-- Compass -->
+                <div id="popup-compass" class="popup-item b-color-compass">
+
+                    <div class="image-slider">
+                        <img class="slide-image" src="assets/portfolio-compass-1.gif" alt="Compass 1">
+                        <img class="slide-image" src="assets/portfolio-compass-2.gif" alt="Compass 2">
+                        <div class="slide-image">
+                            <div class="combined-slide flex-column">
+                                <img class="combined-slide-wide" src="assets/portfolio-compass-3.jpeg" alt="Compass 3">
+                                <p>I started with a prototype using breakout boards and parts that were lying around.</p>
+                            </div>
+                        </div>
+                        <div class="slide-image">
+                            <div class="combined-slide flex-column">
+                                <div class="combo-slide">
+                                    <img src="assets/portfolio-compass-4.gif" alt="Compass 4">
+                                    <div class="sub-combo-slide">
+                                        <img src="assets/portfolio-compass-6.jpeg" alt="Compass 6">
+                                        <img src="assets/portfolio-compass-5.gif" alt="Compass 5">
+                                    </div>
+                                </div>
+                                <p>I got smaller Arduino boards, modeled the device in CAD, 3D printed parts, machined the brass parts, and made cable assemblies.</p>
+                            </div>
+                        </div>
+                        <button class="prev-button">&#10094;</button>
+                        <button class="next-button">&#10095;</button>
+                    </div>
+
+                    <div class="popup-text">
+                        <h1>A Compass to Get Lost</h1>
+                        <p><b>When you only care about where you want to end up and not how to get there. The arrow will always point to your destination so you can make your own route.<b></p>
+                        <p>If you need the time-optimized route, use a maps app. But you might not want the fastest route when you are exploring a city. Use the arrow as a guide to create a route optimized for what is interesting around you.</p>
+                        <p>The idea behind this compass is that we should adapt the amount of information that we use, based on what we need at the moment. It is useful to have more information, but it can be distracting or confusing when there is too much.</p>
+                        <p>I wanted to make a physical device, with a real arrow, and that looks like an old compass. In practice this is too big to be that useful. It will be fun to use the idea in a more portable form factor in a future project.</p>
+                        <p><b></b>How it's made:</b> Arduino with a magnetometer, GPS, motor, lcd screen, potentiometer button and battery. I hand machined the brass parts and 3D printed the chassis.</p>
+                    </div>
+
+                </div>
+
+                <!-- Roadtrip -->                
+                <div id="popup-object02" class="popup-item popup-right flex-column b-color-02">
+
+                    <div class="image-slider">
+                        <img class="slide-image" src="assets/object02-1.gif" alt="OBJECT 02 1">
+                        <img class="slide-image" src="assets/object02-2.gif" alt="OBJECT 02 2">
+                        <button class="prev-button">&#10094;</button>
+                        <button class="next-button">&#10095;</button>
+                    </div>
+                    
+                    <div class="popup-text">
+                        <h1>Road Tripping</h1>
+                        <p><b>Have you ever returned to where you used to live or vacationed, just to drive around those areas? I am trying to capture the nostalgia of driving along familiar roads to see what has changed.</b></p>
+                        <p>I made a script that takes a Google Maps route and creates a video as if you were driving along those roads. The video is every Streetview image along the route. You can choose to look out the front of the car as if you are driving, or out the side window as a passenger.</p>
+                        <p>Last year, I drove with my family to where we used to spend our summers. It was so fun to sit in the back seat of the car and stare out the window. I was inspired to share the experience of nostalgic road trips, driving along old commutes.</p>
+                        <p>I would love to turn this into something more immersive like putting screens behind car windows. I want it to be a shared experience with family and friends, all sitting together in a real car.</p>
+                        <p><b>How it's made:</b> the python script first maps the route using the Google Direction API. It then downloads images at every interpolated GPS coordinate using the Streetview API. It downloads multiple viewing angles at each point, and uses openCV to merge them into one. Then it creates the video out of the images.</p>
+                        <p>You can see the code in <a href="https://github.com/jordan-armitage/" target="_blank">github</a>.</p>
+                    </div>
+
+                </div>
+
+                <!-- First Aid Kit -->
+                <div id="popup-first-aid" class="popup-item popup-right b-color-first-aid">
+
+                    <div class="image-slider">
+                        <img class="slide-image" src="assets/portfolio-first-aid-1.gif" alt="First Aid Kit 1">
+                        <div class="slide-image">
+                            <div class="combined-slide">
+                                <img class="combined-slide-tall" src="assets/portfolio-first-aid-2.gif" alt="First Aid Kit 2">
+                                <img class="combined-slide-tall" src="assets/portfolio-first-aid-3.png" alt="First Aid Kit 3">
+                            </div>
+                        </div>
+                        <img class="slide-image wide-image" src="assets/portfolio-first-aid-4.jpeg" alt="First Aid Kit 4">
+                        <img class="slide-image wide-image" src="assets/portfolio-first-aid-5.png" alt="First Aid Kit 5">
+                        <img class="slide-image wide-image" src="assets/portfolio-first-aid-6.png" alt="First Aid Kit 6">
+                        <button class="prev-button">&#10094;</button>
+                        <button class="next-button">&#10095;</button>
+                    </div>
+
+                    <div class="popup-text">   
+                            <h1>My First Aid Kit</h1>
+                            <p><b>Every workshop needs a well stocked first aid kit. The record for injury-free days in my workshop is 33. Oops.</b></p>
+                            <p>This first aid kit is inspired by <a href="https://dailyartfair.com/exhibition/8796/tom-sachs-galerie-thaddaeus-ropac" target="_blank">Tom Sachs's Bloody Finger Repair Station</a>. I added a Days Since Last Injury Counter inside. Injuries are less painful when you get to push a reset button.</p>
+                            <p><b>How it's made:</b> plywood box in the correct colors. The counter is a real time clock, button, 7 segment display, and Arduino on perf board.</p>
+                    </div>
+
+                </div>
+
+                <!-- Picturebox -->
+                <div id="popup-picturebox" class="popup-item b-color-picturebox">
+                    
+                    <div class="image-slider">
+                        <img class="slide-image" src="assets/portfolio-picturebox-1.gif" alt="Picturebox 1">
+                        <img class="slide-image" src="assets/portfolio-picturebox-2.jpeg" alt="Picturebox 2">
+                        <img class="slide-image" src="assets/portfolio-picturebox-3.jpeg" alt="Picturebox 3">
+                        <img class="slide-image wide-image" src="assets/portfolio-picturebox-4.png" alt="Picturebox 4">
+                        <button class="prev-button">&#10094;</button>
+                        <button class="next-button">&#10095;</button>
+                    </div>
+                    
+                    <div class="popup-text">
+                        <h1>Picturebox</h1>
+                        <p><b>It's better when you can hear it flip.</b></p>
+                        <p><b>How it's made:</b> bearings, spokes and spoke nipples are from an old bike wheel, and the rest is 3D printed.</p>
+                    </div>
+
+                </div>
+
+                <!-- Leatherworking -->
+                <div id="popup-leather" class="popup-item b-color-01">
+    
+                    <div class="image-slider">
+                        <div class="slide-image">
+                            <div class="combined-slide flex-column">
+                                <img class="combined-slide-wide" src="assets/portfolio-leather-2.jpeg" alt="Leather 2">
+                                <p class="margin-bottom-50"><a href="https://store.jordanarmitage.com/product/object01" target="_blank">Object 01</a> is a leather wallet. (1/3)</p>
+                            </div>
+                        </div>
+                        <div class="slide-image">
+                            <div class="combined-slide flex-column">
+                                <img class="combined-slide-wide" src="assets/portfolio-leather-6.png" alt="Leather 6">
+                                <p class="margin-bottom-50">Object 01 (2/3): Initial prototypes we more square and I tried different sizs and zippers.</p>
+                            </div>
+                        </div>
+                        <div class="slide-image">
+                            <div class="combined-slide flex-column">
+                                <img class="combined-slide-wide" src="assets/portfolio-leather-9.gif" alt="Leather 9">
+                                <p class="margin-bottom-50">Object 01 (3/3): Template used to make a batch of 40 wallets.</p>
+                            </div>
+                        </div>
+                        <div class="slide-image">
+                            <div class="combined-slide flex-column">
+                                <img class="combined-slide-wide" src="assets/portfolio-leather-3.png" alt="Leather 3">
+                                <p class="margin-bottom-50">iPad case (1/3): Initial sketch</p>
+                            </div>
+                        </div>
+                        <div class="slide-image">
+                            <div class="combined-slide flex-column">
+                                <img class="combined-slide-wide" src="assets/portfolio-leather-4.png" alt="Leather 4">
+                                <p class="margin-bottom-50">iPad case (2/3): Pattern and dimensions</p>
+                            </div>
+                        </div>
+                        <div class="slide-image">
+                            <div class="combined-slide flex-column">
+                                <img class="combined-slide-wide" src="assets/portfolio-leather-5.png" alt="Leather 5">
+                                <p class="margin-bottom-50">iPad case (3/3): Final product</p>
+                            </div>
+                        </div>
+                        <div class="slide-image">
+                            <div class="combined-slide flex-column">
+                                <img class="combined-slide-wide" src="assets/portfolio-leather-7.png" alt="Leather 7">
+                                <p class="margin-bottom-50">Kindle case (1/2): Initial sketch</p>
+                            </div>
+                        </div>
+                        <div class="slide-image">
+                            <div class="combined-slide flex-column">
+                                <img class="combined-slide-tall" src="assets/portfolio-leather-8.jpeg" alt="Leather 8">
+                                <p class="margin-bottom-50">Kindle case (2/2): Final Product</p>
+                            </div>
+                        </div>
+                        <button class="prev-button">&#10094;</button>
+                        <button class="next-button">&#10095;</button>
+                    </div>
+                    
+                    <div class="popup-text">
+                        <h1>Leatherworking</h1>
+                        <p>I started making bags and wallets out of leather during the pandemic, when it was the only thing I had space to make in my small apartment. Most designs have a circle with an offset line through it, randomly inspired by this <a href="https://www.nflshop.com/san-francisco-49ers/mens-san-francisco-49ers-nike-black-sideline-logo-performance-pullover-hoodie/t-14608296+p-933435902218+z-8-3719032931" target="_blank">Nike NFL sweater</a>.</p>
+                        <p><b>How it's made:</b> cut, punched, sewn and finished by hand. I make patterns for some projects, others I make based on sketches</p>
+                    </div>
+
+                </div>
+
+                <!-- Pickle Puck -->
+                <div id="popup-pickle" class="popup-item b-color-pickle">
+
+                    <div class="single-image">
+                        <img class="slide-image" src="assets/portfolio-pickle-2.jpeg" alt="Pickle Puck">
+                    </div>
+                    
+                    <div class="popup-text">
+                        <h1>Pickle Puck</h1>
+                        <p><b>The Pickle Puck is a wireless sensor that tracks the progress of food fermentation. It monitors what is going on inside the fermentation barrel for better food safety, and consistent, delicious results.</b></p>
+                        <p>The pH, temperature and dissolved solids sensors go in the fermentation barrel. The data collected creates a fermentation profile for each recipe. These profiles can adapt to temperature, ripeness, water content or other ingredient changes. The profiles can predict when the food is perfect to jar, and identify any issues along the way.</p>
+                        <p>When I was working as a cook, I would try to get better at fermenting foods by reading books and papers on fermentation, and talking to fermented food companies. I found a paper that linked flavor, time, temperature, pH, and salt in kimchi fermentation curves. I was also learning about how commercial food fermentation processes control variables. I set out to make a device that tracks the important progress indicators to adapt to variations and improve outcomes.</p>
+                        <p><a href="https://koreascience.kr/article/JAKO198403041899994.page" target="_blank">Effect of Temperature and Salt Concentration on Kimchi Fermentation (Mheen and Kwon, 1984)</a></p>
+                        <p>I made a prototype, got accepted into a hardware incubator, and found a couple companies willing to test it.</p>
+                        <p><b>How it's made:</b> Arduino with pH, temperature and dissolved solids sensors. 3D printed chassis in a waterproof container. Not pictured is the main battery.</p>
+                    </div>
+                    
+                </div>
+
+                <!-- Winnow -->
+                <div id="popup-winnow" class="popup-item b-color-winnow">
+
+                    <div class="image-slider">
+                        <img class="slide-image" src="assets/portfolio-winnow-1.png" alt="Winnow 1">
+                        <div class="slide-image">
+                            <div class="combined-slide flex-column">
+                                <img class="combined-slide-wide" src="assets/portfolio-winnow-2.jpeg" alt="Winnow 2">
+                                <p>Updated the sheet metal design to use a LCD screen and android components instead of a prebuilt tablet. This made the device smaller, lighter and easier to build.</p>
+                            </div>
+                        </div>
+                        <div class="slide-image">
+                            <div class="combined-slide flex-column">
+                                <img class="combined-slide-wide" src="assets/portfolio-winnow-3.png" alt="Winnow 3">
+                                <p>Consolidated the internal components onto a custom PCB, while maintaining full software compatibility.</p>
+                            </div>
+                        </div>
+                        <div class="slide-image">
+                            <div class="combined-slide flex-column">
+                                <img class="combined-slide-wide" src="assets/portfolio-winnow-4.gif" alt="Winnow 4">
+                                <p>Antenna testing at a local university to validate the design before UL certification.</p>
+                            </div>
+                        </div>
+                        <div class="slide-image">
+                            <div class="combined-slide flex-column">
+                                <img class="combined-slide-wide" src="assets/portfolio-winnow-5.png" alt="Winnow 5">
+                                <p>The left image is the two new devices together. The smaller device uses many of the same components in a milled aluminum body.</p>
+                            </div>
+                        </div>
+                        <button class="prev-button">&#10094;</button>
+                        <button class="next-button">&#10095;</button>
+                    </div>
+                    
+                    <div class="popup-text">
+                        <h1>Two New Devices: Winnow Hardware</h1>
+                        <p><b>Full redesign of two hardware devices to merge internal components onto new PCBs, replace the android tablets, and lower the Bill of Material cost by 24% with 42% fewer parts. Plus it looks great.</b></p>
+                        <p>Winnow is working to reduce food waste in commercial kitchens. The hardware devices identify the all of the wasted food using computer vision or user input. The chef receives a list of the most wasted items and they can make or buy less of those to save food and food cost.</p>
+                        <p>I led the hardware team to redesign two hardware devices. The larger device has a camera and a GPU to identify the food waste using computer vision on the edge. The smaller device does not have a camera and relies on user input.</p>
+                    </div>
+                    
+                </div>
+
+                <!-- Spacerock -->
+                <div id="popup-spacerock" class="popup-item popup-right b-color-spacerock">
+
+                    <div class="single-image">
+                        <img class="slide-image" src="assets/portfolio-spacerock-1.jpeg" alt="Spacerock">
+                    </div>
+
+                    <div class="popup-text">
+                        <h1>Spacerock</h1>
+                        <p><b>A device to summarize your conversations.</b></p>
+                        <p>I built a prototype for a local startup. This device listens to your conversation and gives a transcription and summary using large language models.</p>
+                        <p>Try the TLDL app at <a href="https://spacebar.fm/explore/TLDL" target="_blank">Spacebar.fm</a></p>
+                        <p><b>How it's made:</b> a headless Raspberry Pi with a microphone in a 3D printed chassis. The Pi runs the ML models locally.</p>
+                    </div>
+                    
+                </div>
+
+                <!-- Wall Hooks -->
+                <div id="popup-hooks" class="popup-item popup-right b-color-hooks">
+
+                    <div class="image-slider">
+                        <img class="slide-image" src="assets/object03-1.png" alt="Wall Hooks 1">
+                        <img class="slide-image wide-image" src="assets/portfolio-hooks-1.png" alt="Wall Hooks 2">
+                        <img class="slide-image wide-image" src="assets/portfolio-hooks-2.jpeg" alt="Wall Hooks 3">
+                        <img class="slide-image wide-image" src="assets/portfolio-hooks-3.png" alt="Wall Hooks 4">
+                        <button class="prev-button">&#10094;</button>
+                        <button class="next-button">&#10095;</button>
+                    </div>
+                    
+                    <div class="popup-text">
+                        <h1>Object 03 is a wall hook.</h1>
+                        <p><a href="https://www.instagram.com/zisiga/" target="_blank">Zisiga Mukulu</a> came to me with a rough sketch of a wall hook for her house. It was inspired by the <a href="https://www.brooklynmuseum.org/opencollection/objects/2605" target="_blank">Eames Hang-It-All</a> and other similar hooks. We made a small batch that turned out so nice that we had to make more of them.</p>
+                        <p>These hooks are being sold as <a href="https://store.jordanarmitage.com/product/object03" target="_blank">Object 03</a>, and are the second object for sale as part of the <a href="https://www.jordanarmitage.com/about.html" target="_blank">Object Incubator</a>. They are available online and in a few stores in New York City.</p>
+                        <p><b>How it's made:</b> 2.5” solid birch hardwood sphere and 0.5” dowel to the wall. They come in 4 colors, painted with UV resistant acrylic paint, and a water resistant coating. There is a screw, wall plug, and instructions in the box.</p>
+                    </div>
+                    
+                </div>
+
+                <!-- Youtube Adblock -->
+                <div id="popup-youtube" class="popup-item popup-right b-color-youtube">
+
+                    <div class="image-slider">
+                        <img class="slide-image" src="assets/portfolio-youtube-01.png" alt="Youtube Adblock 1">
+                    </div>
+                    
+                    <div class="popup-text">
+                        <h1>YouTube AdBlock</h1>
+                        <p><b>This can identify in-video YouTube advertisements and skip over them. But do we have a responsibility to watch ads?</b></p>
+                        <p>This analyzes a YouTube video transcript using large language models to identify in video advertisements. Once it identifies the parts of the video that are ads it creates an embedded video that skips ahead to timestamps past the ads. It could also identify and skip introductions, outros, or other parts of the video that you’d like to skip.</p>
+                        <p>I am starting with YouTube videos because the website provides automatically generated transcripts. This method of skipping ads could also work with podcasts by using a transcription model before the large language model.</p>
+                        <p><br></p>
+                        <p>I love watching YouTube videos, and I appreciate that the creators are paid by advertisement. When I watch a video do I have a responsibility to sit through the ads?</p>
+                        <p>If an ad comes on when I watch TV, I change channels. When I listen to podcasts, I mash the skip forward button to skip ads. When I watch youtube videos I hit the arrow keys to jump ahead. I have banner blindness to ads that I see on the internet. If I already am not listening to or watching the ads, is it cheating to skip the ads using automation?</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="main-body">
+            <div class="grid-body">
+            
+                <!-- Compass --> 
+                <div class="gif-container">
+                    <div class="image-overlay" onclick="showPopup('popup-compass', '0')">
+                        <img class="static" src="assets/portfolio-compass-1-still.png" alt="Compass 1 Still" >
+                        <img src="assets/portfolio-compass-1.gif" alt="Compass 1">
+                        <p class="image-text portfolio-text t-color-compass">Compass</p>
+                    </div>
+                </div>
+
+                <!-- Wall Hooks --> 
+                <div class="image-container">
+                    <div class="image-overlay" onclick="showPopup('popup-hooks', '1')">
+                        <img src="assets/object03-1.png" alt="Object 03 1">
+                        <p class="image-text portfolio-text t-color-hooks">Wall<br>Hooks</p>
+                    </div>
+                </div> 
+
+                <!-- Winnow --> 
+                <div class="image-container">
+                    <div class="image-overlay" onclick="showPopup('popup-winnow', '2')">
+                        <img src="assets/portfolio-winnow-1.png" alt="Winnow 1">
+                        <p class="image-text portfolio-text t-color-winnow">Device Redesigns</p>
+                    </div>
+                </div>
+
+                <!-- Road Trip --> 
+                <div class="gif-container">
+                    <div class="image-overlay" onclick="showPopup('popup-object02', '3')">
+                        <img class="static" src="assets/object02-1-still.jpeg" alt="OBJECT 02 1 Still">
+                        <img src="assets/object02-1-square.gif" alt="OBJECT 02 1 Square">
+                        <p class="image-text portfolio-text t-color-02">Road Tripping</p>
+                    </div>
+                </div>
+
+                <!-- Pickle Puck --> 
+                <div class="image-container">
+                    <div class="image-overlay" onclick="showPopup('popup-pickle', '4')">
+                        <img src="assets/portfolio-pickle-2.jpeg" alt="Pickle Puck">
+                        <p class="image-text portfolio-text t-color-pickle">Pickle Puck</p>
+                    </div>
+                </div>
+
+                <!-- Youtube --> 
+                <div class="image-container">
+                    <div class="image-overlay" onclick="showPopup('popup-youtube', '5')">
+                        <img src="assets/portfolio-youtube-01.png" alt="Youtube Adblock 1">
+                        <p class="image-text portfolio-text t-color-hooks"></p>
+                    </div>
+                </div> 
+
+                <!-- Leatherworking --> 
+                <div class="image-container">
+                    <div class="image-overlay" onclick="showPopup('popup-leather', '6')">
+                        <img src="assets/object01-1.jpeg" alt="Leather 1">
+                        <p class="image-text portfolio-text t-color-01">Leather Working</p>
+                    </div>
+                </div> 
+
+                <!-- Spacerock --> 
+                <div class="image-container">
+                    <div class="image-overlay" onclick="showPopup('popup-spacerock', '7')">
+                        <img src="assets/portfolio-spacerock-1.jpeg" alt="Spacerock 1">
+                        <p class="image-text portfolio-text t-color-spacerock">Spacerock</p>
+                    </div>
+                </div> 
+
+                <!-- Picturebox --> 
+                <div class="gif-container">
+                    <div class="image-overlay" onclick="showPopup('popup-picturebox', '8')">
+                        <img class="static" src="assets/portfolio-picturebox-1-still.png" alt="Picturebox 1 Still">
+                        <img src="assets/portfolio-picturebox-1.gif" alt="Picturebox 1">
+                        <p class="image-text portfolio-text t-color-picturebox">Picturebox</p>
+                    </div>
+                </div>
+
+                <!-- First Aid Kit --> 
+                <div class="gif-container">
+                    <div class="image-overlay" onclick="showPopup('popup-first-aid', '9')">
+                        <img class="static" src="assets/portfolio-first-aid-1-still.png" alt="First Aid Kit 1 Still">
+                        <img src="assets/portfolio-first-aid-1.gif" alt="First Aid Kit 1">
+                        <p class="image-text portfolio-text t-color-first-aid">My First Aid Kit</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Me -->
+        <div class="jordan-armitage">
+            <div id="popup-me" class="popup-item b-color-me">
+    
+                <div class="single-image">
+                    <img class="slide-image" src="assets/portfolio-me.jpeg" alt="Me">
+                </div>
+    
+                <div class="popup-text">
+                    <h1>Jordan Armitage</h1>
+                    <p><b>Multidisciplinary Engineer, Based in Brooklyn, NY.</b></p>
+                    <p>These are a few of my favorite projects.</p>
+                    <a href="assets/jordan-armitage-resume-2023.pdf" target="_blank" download>Resume</a>
+                </div>
+            </div>
+        </div>
+        
+
+        <script src="script.js"></script>
+
+    </body>
+</html>

@@ -2,7 +2,8 @@ function showPopup(id, row) {
     var popupContent = document.getElementById('popup-content');
     var popup = document.getElementById('popup');
     var isMobile = window.matchMedia("only screen and (max-width: 880px)").matches;
-    var top = ( ( row - 1 ) * 440 ) + 80;
+    var top = ( Math.floor( row / 2 ) * 440 ) + 80;
+    var topMobile = ( row * 440 ) + 90;
 
 
     // Hide all popup items
@@ -13,10 +14,8 @@ function showPopup(id, row) {
     }
 
     if (isMobile) {
-        popup.style.position = 'fixed';
-        popup.style.top = '5vh';
+        popup.style.top = topMobile + "px";
     } else {
-        popup.style.position = 'absolute';
         popup.style.top = top + "px";
     }
 
