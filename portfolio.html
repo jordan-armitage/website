@@ -21,11 +21,12 @@
                         <img class="header-logo" src="assets/logo-black.png" alt="Logo">
                     </a>
                 </div>
+                <div class="header-portfolio-text">Portfolio</div>
 
-                <div class="header-links">
-                    <a href="index.html" class="header-link" target="_blank">Home</a>
+
+                <!-- <div class="header-links">
                     <a href="about.html" class="header-link" target="_blank">About</a>
-                </div>
+                </div> -->
             </div>
             
             <div class="divider-line"></div>
@@ -37,7 +38,7 @@
                 <button id="close-popup-button" onclick="closePopup()">X</button>
 
                 <!-- Compass -->
-                <div id="popup-compass" class="popup-item b-color-compass">
+                <div id="popup-compass" class="popup-item popup-right b-color-compass">
 
                     <div class="image-slider">
                         <img class="slide-image" src="assets/portfolio-compass-1.gif" alt="Compass 1">
@@ -98,7 +99,7 @@
                 </div>
 
                 <!-- First Aid Kit -->
-                <div id="popup-first-aid" class="popup-item popup-right b-color-first-aid">
+                <div id="popup-first-aid" class="popup-item b-color-first-aid">
 
                     <div class="image-slider">
                         <img class="slide-image" src="assets/portfolio-first-aid-1.gif" alt="First Aid Kit 1">
@@ -125,7 +126,7 @@
                 </div>
 
                 <!-- Picturebox -->
-                <div id="popup-picturebox" class="popup-item b-color-picturebox">
+                <div id="popup-picturebox" class="popup-item popup-right b-color-picturebox">
                     
                     <div class="image-slider">
                         <img class="slide-image" src="assets/portfolio-picturebox-1.gif" alt="Picturebox 1">
@@ -145,7 +146,7 @@
                 </div>
 
                 <!-- Leatherworking -->
-                <div id="popup-leather" class="popup-item b-color-01">
+                <div id="popup-leather" class="popup-item popup-right b-color-01">
     
                     <div class="image-slider">
                         <div class="slide-image">
@@ -209,7 +210,7 @@
                 </div>
 
                 <!-- Pickle Puck -->
-                <div id="popup-pickle" class="popup-item b-color-pickle">
+                <div id="popup-pickle" class="popup-item popup-right b-color-pickle">
 
                     <div class="single-image">
                         <img class="slide-image" src="assets/portfolio-pickle-2.jpeg" alt="Pickle Puck">
@@ -270,7 +271,7 @@
                 </div>
 
                 <!-- Spacerock -->
-                <div id="popup-spacerock" class="popup-item popup-right b-color-spacerock">
+                <div id="popup-spacerock" class="popup-item b-color-spacerock">
 
                     <div class="single-image">
                         <img class="slide-image" src="assets/portfolio-spacerock-1.jpeg" alt="Spacerock">
@@ -287,7 +288,7 @@
                 </div>
 
                 <!-- Wall Hooks -->
-                <div id="popup-hooks" class="popup-item popup-right b-color-hooks">
+                <div id="popup-hooks" class="popup-item b-color-hooks">
 
                     <div class="image-slider">
                         <img class="slide-image" src="assets/object03-1.png" alt="Wall Hooks 1">
@@ -308,7 +309,7 @@
                 </div>
 
                 <!-- Youtube Adblock -->
-                <div id="popup-youtube" class="popup-item popup-right b-color-youtube">
+                <div id="popup-youtube" class="popup-item b-color-youtube">
 
                     <div class="image-slider">
                         <img class="slide-image" src="assets/portfolio-youtube-01.png" alt="Youtube Adblock 1">
@@ -326,6 +327,21 @@
                     
                 </div>
 
+                <!-- Me -->
+                <div id="popup-me" class="popup-item b-color-me">
+        
+                    <div class="single-image">
+                        <img class="slide-image" src="assets/portfolio-me.jpeg" alt="Me">
+                    </div>
+        
+                    <div class="popup-text">
+                        <h1>Jordan Armitage</h1>
+                        <p><b>Multidisciplinary Engineer, Based in Brooklyn, NY.</b></p>
+                        <p>These are a few of my favorite projects.</p>
+                        <a href="assets/jordan-armitage-resume-2023.pdf" target="_blank" download>Resume</a>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -333,22 +349,22 @@
         <div class="main-body">
             <div class="grid-body">
             
+                <!-- ME --> 
+                <div class="image-container">
+                    <div class="image-overlay" onclick="showPopup('popup-me', '0')">
+                        <img src="assets/portfolio-me.jpeg" alt="Me">
+                        <p class="image-text portfolio-text t-color-me">Jordan<br>Armitage</p>
+                    </div>
+                </div> 
+
                 <!-- Compass --> 
                 <div class="gif-container">
-                    <div class="image-overlay" onclick="showPopup('popup-compass', '0')">
+                    <div class="image-overlay" onclick="showPopup('popup-compass', '1')">
                         <img class="static" src="assets/portfolio-compass-1-still.png" alt="Compass 1 Still" >
                         <img src="assets/portfolio-compass-1.gif" alt="Compass 1">
                         <p class="image-text portfolio-text t-color-compass">Compass</p>
                     </div>
                 </div>
-
-                <!-- Wall Hooks --> 
-                <div class="image-container">
-                    <div class="image-overlay" onclick="showPopup('popup-hooks', '1')">
-                        <img src="assets/object03-1.png" alt="Object 03 1">
-                        <p class="image-text portfolio-text t-color-hooks">Wall<br>Hooks</p>
-                    </div>
-                </div> 
 
                 <!-- Winnow --> 
                 <div class="image-container">
@@ -367,9 +383,17 @@
                     </div>
                 </div>
 
+                <!-- Wall Hooks --> 
+                <div class="image-container">
+                    <div class="image-overlay" onclick="showPopup('popup-hooks', '4')">
+                        <img src="assets/object03-1.png" alt="Object 03 1">
+                        <p class="image-text portfolio-text t-color-hooks">Wall<br>Hooks</p>
+                    </div>
+                </div> 
+
                 <!-- Pickle Puck --> 
                 <div class="image-container">
-                    <div class="image-overlay" onclick="showPopup('popup-pickle', '4')">
+                    <div class="image-overlay" onclick="showPopup('popup-pickle', '5')">
                         <img src="assets/portfolio-pickle-2.jpeg" alt="Pickle Puck">
                         <p class="image-text portfolio-text t-color-pickle">Pickle Puck</p>
                     </div>
@@ -377,7 +401,7 @@
 
                 <!-- Youtube --> 
                 <div class="image-container">
-                    <div class="image-overlay" onclick="showPopup('popup-youtube', '5')">
+                    <div class="image-overlay" onclick="showPopup('popup-youtube', '6')">
                         <img src="assets/portfolio-youtube-01.png" alt="Youtube Adblock 1">
                         <p class="image-text portfolio-text t-color-hooks"></p>
                     </div>
@@ -385,7 +409,7 @@
 
                 <!-- Leatherworking --> 
                 <div class="image-container">
-                    <div class="image-overlay" onclick="showPopup('popup-leather', '6')">
+                    <div class="image-overlay" onclick="showPopup('popup-leather', '7')">
                         <img src="assets/object01-1.jpeg" alt="Leather 1">
                         <p class="image-text portfolio-text t-color-01">Leather Working</p>
                     </div>
@@ -393,7 +417,7 @@
 
                 <!-- Spacerock --> 
                 <div class="image-container">
-                    <div class="image-overlay" onclick="showPopup('popup-spacerock', '7')">
+                    <div class="image-overlay" onclick="showPopup('popup-spacerock', '8')">
                         <img src="assets/portfolio-spacerock-1.jpeg" alt="Spacerock 1">
                         <p class="image-text portfolio-text t-color-spacerock">Spacerock</p>
                     </div>
@@ -401,7 +425,7 @@
 
                 <!-- Picturebox --> 
                 <div class="gif-container">
-                    <div class="image-overlay" onclick="showPopup('popup-picturebox', '8')">
+                    <div class="image-overlay" onclick="showPopup('popup-picturebox', '9')">
                         <img class="static" src="assets/portfolio-picturebox-1-still.png" alt="Picturebox 1 Still">
                         <img src="assets/portfolio-picturebox-1.gif" alt="Picturebox 1">
                         <p class="image-text portfolio-text t-color-picturebox">Picturebox</p>
@@ -410,7 +434,7 @@
 
                 <!-- First Aid Kit --> 
                 <div class="gif-container">
-                    <div class="image-overlay" onclick="showPopup('popup-first-aid', '9')">
+                    <div class="image-overlay" onclick="showPopup('popup-first-aid', '10')">
                         <img class="static" src="assets/portfolio-first-aid-1-still.png" alt="First Aid Kit 1 Still">
                         <img src="assets/portfolio-first-aid-1.gif" alt="First Aid Kit 1">
                         <p class="image-text portfolio-text t-color-first-aid">My First Aid Kit</p>
@@ -418,25 +442,7 @@
                 </div>
 
             </div>
-        </div>
-
-        <!-- Me -->
-        <div class="jordan-armitage">
-            <div id="popup-me" class="popup-item b-color-me">
-    
-                <div class="single-image">
-                    <img class="slide-image" src="assets/portfolio-me.jpeg" alt="Me">
-                </div>
-    
-                <div class="popup-text">
-                    <h1>Jordan Armitage</h1>
-                    <p><b>Multidisciplinary Engineer, Based in Brooklyn, NY.</b></p>
-                    <p>These are a few of my favorite projects.</p>
-                    <a href="assets/jordan-armitage-resume-2023.pdf" target="_blank" download>Resume</a>
-                </div>
-            </div>
-        </div>
-        
+        </div>     
 
         <script src="script.js"></script>
 
